@@ -2,28 +2,38 @@ import { motion } from 'framer-motion'
 
 export default function Commissioner() {
   return (
-    <section className="section">
-      <div className="section-narrow">
+    <section className="section relative overflow-hidden">
+      {/* Full-width hero image background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <img
+          src="/ricardinho-commissioner.jpg"
+          alt=""
+          className="w-full h-full object-cover object-top opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-section-alt)] via-[rgba(13,13,20,0.7)] to-[var(--bg-section-alt)]" />
+      </div>
+
+      <div className="section-narrow relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-8"
         >
           <p className="section-eyebrow">The Commissioner</p>
           <h2
-            className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4"
+            className="text-6xl sm:text-7xl md:text-8xl font-bold mb-4"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             <span className="gradient-text">RICARDINHO</span>
           </h2>
         </motion.div>
 
-        {/* Photo — centered */}
+        {/* Large centered portrait */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="mb-10"
@@ -31,11 +41,11 @@ export default function Commissioner() {
           <img
             src="/ricardinho-commissioner.jpg"
             alt="Ricardinho — Commissioner, World Futsal Championships"
-            className="w-56 sm:w-64 md:w-72 rounded-lg glow-border mx-auto"
+            className="w-full max-w-lg mx-auto rounded-lg glow-border"
           />
         </motion.div>
 
-        {/* Bio — centered */}
+        {/* Bio */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -43,7 +43,7 @@ export default function WhyCompete() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-16 max-w-3xl mx-auto">
           {reasons.map((item, i) => (
             <motion.div
               key={item.number}
@@ -51,7 +51,7 @@ export default function WhyCompete() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-center group"
+              className="text-center group px-4"
             >
               <span
                 className="block text-5xl font-bold text-[var(--border)] group-hover:text-[var(--accent)] transition-colors duration-500 mb-3"
@@ -65,7 +65,7 @@ export default function WhyCompete() {
               >
                 {item.title}
               </h3>
-              <p className="text-[var(--text-secondary)] leading-relaxed max-w-xs mx-auto">
+              <p className="text-[var(--text-secondary)] leading-relaxed mx-auto">
                 {item.desc}
               </p>
             </motion.div>
