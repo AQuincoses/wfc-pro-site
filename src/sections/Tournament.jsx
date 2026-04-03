@@ -25,7 +25,7 @@ const details = [
 
 export default function Tournament() {
   return (
-    <section id="tournament" className="relative py-32 px-6">
+    <section id="tournament" className="relative py-40 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div

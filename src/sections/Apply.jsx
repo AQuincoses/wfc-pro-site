@@ -50,7 +50,7 @@ export default function Apply() {
 
   if (status === 'sent') {
     return (
-      <section id="apply" className="relative py-32 px-6">
+      <section id="apply" className="relative py-40 px-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -72,7 +72,7 @@ export default function Apply() {
   }
 
   return (
-    <section id="apply" className="relative py-32 px-6">
+    <section id="apply" className="relative py-40 px-6">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <motion.div

@@ -25,8 +25,8 @@ const reasons = [
 
 export default function WhyCompete() {
   return (
-    <section className="relative py-32 px-6">
-      <div className="max-w-5xl mx-auto">
+    <section className="relative py-40 px-6">
+      <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -46,34 +46,32 @@ export default function WhyCompete() {
           </h2>
         </motion.div>
 
-        {/* Reasons list */}
-        <div className="space-y-12">
+        {/* Reasons grid — centered cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {reasons.map((item, i) => (
             <motion.div
               key={item.number}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="flex items-start gap-6 sm:gap-10 group"
+              className="text-center group"
             >
               <span
-                className="text-5xl sm:text-6xl font-bold text-[var(--border)] group-hover:text-[var(--accent)] transition-colors duration-500 shrink-0"
+                className="block text-5xl font-bold text-[var(--border)] group-hover:text-[var(--accent)] transition-colors duration-500 mb-3"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
                 {item.number}
               </span>
-              <div className="border-l border-[var(--border)] group-hover:border-[var(--accent)] transition-colors duration-500 pl-6 sm:pl-10">
-                <h3
-                  className="text-2xl sm:text-3xl font-bold mb-2 text-[var(--text-primary)]"
-                  style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em' }}
-                >
-                  {item.title}
-                </h3>
-                <p className="text-[var(--text-secondary)] leading-relaxed max-w-xl">
-                  {item.desc}
-                </p>
-              </div>
+              <h3
+                className="text-2xl sm:text-3xl font-bold mb-3 text-[var(--text-primary)]"
+                style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em' }}
+              >
+                {item.title}
+              </h3>
+              <p className="text-[var(--text-secondary)] leading-relaxed max-w-sm mx-auto">
+                {item.desc}
+              </p>
             </motion.div>
           ))}
         </div>

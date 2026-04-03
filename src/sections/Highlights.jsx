@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export default function Highlights() {
   return (
-    <section id="highlights" className="relative py-32 px-6">
+    <section id="highlights" className="relative py-40 px-6">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <motion.div

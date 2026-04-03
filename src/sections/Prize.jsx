@@ -30,7 +30,7 @@ function AnimatedNumber({ target, duration = 2000 }) {
 
 export default function Prize() {
   return (
-    <section id="prize" className="relative py-32 px-6 overflow-hidden">
+    <section id="prize" className="relative py-40 px-6 overflow-hidden">
       {/* Glow background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(0,212,255,0.1)_0%,transparent_60%)]" />
