@@ -18,7 +18,7 @@ const reasons = [
   },
   {
     number: '04',
-    title: '$30,000 Prize',
+    title: '$50,000 Prize',
     desc: 'The largest prize purse in American futsal. Compete at the highest level for the highest stakes.',
   },
 ]

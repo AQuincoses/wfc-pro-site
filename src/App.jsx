@@ -2,6 +2,7 @@ import Hero from './sections/Hero'
 import Prize from './sections/Prize'
 import Tournament from './sections/Tournament'
 import WhyCompete from './sections/WhyCompete'
+import Commissioner from './sections/Commissioner'
 import Highlights from './sections/Highlights'
 import Apply from './sections/Apply'
 import Footer from './sections/Footer'
@@ -15,6 +16,7 @@ export default function App() {
       <Prize />
       <Tournament />
       <WhyCompete />
+      <Commissioner />
       <Highlights />
       <Apply />
       <Footer />

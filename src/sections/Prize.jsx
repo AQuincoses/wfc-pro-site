@@ -57,7 +57,7 @@ export default function Prize() {
             className="text-7xl sm:text-8xl md:text-9xl lg:text-[12rem] font-bold glow-text leading-none"
             style={{ fontFamily: 'var(--font-display)', color: 'var(--accent)' }}
           >
-            <AnimatedNumber target={30000} />
+            <AnimatedNumber target={50000} />
           </h2>
         </motion.div>
 
