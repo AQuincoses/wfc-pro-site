@@ -30,25 +30,22 @@ function AnimatedNumber({ target, duration = 2000 }) {
 
 export default function Prize() {
   return (
-    <section id="prize" className="relative py-40 px-6 overflow-hidden">
-      {/* Glow background */}
+    <section id="prize" className="section relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(0,212,255,0.1)_0%,transparent_60%)]" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
-        {/* Eyebrow */}
+      <div className="section-narrow relative z-10">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-sm uppercase tracking-[0.3em] font-semibold text-[var(--accent-hot)] mb-8"
+          className="section-eyebrow"
         >
           The Prize
         </motion.p>
 
-        {/* Big number */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -64,7 +61,6 @@ export default function Prize() {
           </h2>
         </motion.div>
 
-        {/* Tagline */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,19 +77,10 @@ export default function Prize() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-lg text-[var(--text-secondary)] max-w-lg mx-auto"
+          className="section-body"
         >
           Three days. One champion. The largest cash prize in futsal tournament history.
         </motion.p>
-
-        {/* Divider line */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ delay: 0.7, duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-16 h-px bg-gradient-to-r from-transparent via-[var(--accent)] to-transparent max-w-md mx-auto"
-        />
       </div>
     </section>
   )

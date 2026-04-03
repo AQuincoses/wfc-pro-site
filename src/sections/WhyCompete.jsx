@@ -25,19 +25,16 @@ const reasons = [
 
 export default function WhyCompete() {
   return (
-    <section className="relative py-40 px-6">
-      <div className="max-w-4xl mx-auto">
-        {/* Header */}
+    <section className="section">
+      <div className="section-inner">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="mb-20"
         >
-          <p className="text-sm uppercase tracking-[0.3em] font-semibold text-[var(--accent-hot)] mb-4">
-            The Opportunity
-          </p>
+          <p className="section-eyebrow">The Opportunity</p>
           <h2
             className="text-5xl sm:text-6xl md:text-7xl font-bold"
             style={{ fontFamily: 'var(--font-display)' }}
@@ -46,8 +43,7 @@ export default function WhyCompete() {
           </h2>
         </motion.div>
 
-        {/* Reasons grid — centered cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-4xl mx-auto">
           {reasons.map((item, i) => (
             <motion.div
               key={item.number}
@@ -69,7 +65,7 @@ export default function WhyCompete() {
               >
                 {item.title}
               </h3>
-              <p className="text-[var(--text-secondary)] leading-relaxed max-w-sm mx-auto">
+              <p className="text-[var(--text-secondary)] leading-relaxed max-w-xs mx-auto">
                 {item.desc}
               </p>
             </motion.div>

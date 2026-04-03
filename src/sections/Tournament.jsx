@@ -25,19 +25,16 @@ const details = [
 
 export default function Tournament() {
   return (
-    <section id="tournament" className="relative py-40 px-6">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
+    <section id="tournament" className="section">
+      <div className="section-inner">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <p className="text-sm uppercase tracking-[0.3em] font-semibold text-[var(--accent-hot)] mb-4">
-            The Tournament
-          </p>
+          <p className="section-eyebrow">The Tournament</p>
           <h2
             className="text-5xl sm:text-6xl md:text-7xl font-bold"
             style={{ fontFamily: 'var(--font-display)' }}
@@ -47,8 +44,7 @@ export default function Tournament() {
           </h2>
         </motion.div>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {details.map((item, i) => (
             <motion.div
               key={item.title}
@@ -60,7 +56,7 @@ export default function Tournament() {
             >
               <div className="text-4xl mb-4">{item.icon}</div>
               <h3
-                className="text-xl font-bold mb-2 text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors"
+                className="text-lg font-bold mb-2 text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors"
                 style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em' }}
               >
                 {item.title}
@@ -72,13 +68,12 @@ export default function Tournament() {
           ))}
         </div>
 
-        {/* Format overview */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="mt-16"
         >
           <div className="inline-flex items-center gap-4 sm:gap-6 text-sm sm:text-base font-semibold uppercase tracking-wider text-[var(--text-muted)]">
             <span className="text-[var(--text-primary)]">Group Stage</span>

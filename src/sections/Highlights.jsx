@@ -2,37 +2,33 @@ import { motion } from 'framer-motion'
 
 export default function Highlights() {
   return (
-    <section id="highlights" className="relative py-40 px-6">
-      <div className="max-w-5xl mx-auto">
-        {/* Header */}
+    <section id="highlights" className="section">
+      <div className="section-inner">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="mb-12"
         >
-          <p className="text-sm uppercase tracking-[0.3em] font-semibold text-[var(--accent-hot)] mb-4">
-            Where It All Began
-          </p>
+          <p className="section-eyebrow">Where It All Began</p>
           <h2
             className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             13 YEARS OF <span className="gradient-text">FUTSAL</span>
           </h2>
-          <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed">
+          <p className="section-body">
             It all started with World Futsal Championships I in 2014. Now, the 13th edition brings with it the largest cash prize in futsal tournament history.
           </p>
         </motion.div>
 
-        {/* Video embed */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="aspect-video w-full rounded-lg overflow-hidden glow-border"
+          className="aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden glow-border"
           style={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border)' }}
         >
           <iframe

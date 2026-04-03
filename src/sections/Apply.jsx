@@ -50,11 +50,11 @@ export default function Apply() {
 
   if (status === 'sent') {
     return (
-      <section id="apply" className="relative py-40 px-6">
+      <section id="apply" className="section">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="max-w-2xl mx-auto text-center"
+          className="section-narrow"
         >
           <div className="text-6xl mb-6">✓</div>
           <h2
@@ -72,8 +72,8 @@ export default function Apply() {
   }
 
   return (
-    <section id="apply" className="relative py-40 px-6">
-      <div className="max-w-3xl mx-auto">
+    <section id="apply" className="section">
+      <div className="section-narrow">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
