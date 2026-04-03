@@ -83,7 +83,7 @@ export default function Prize() {
           viewport={{ once: true }}
           className="text-lg text-[var(--text-secondary)] max-w-lg mx-auto"
         >
-          Three days. One champion. The biggest prize in American futsal history.
+          Three days. One champion. The largest cash prize in futsal tournament history.
         </motion.p>
 
         {/* Divider line */}
