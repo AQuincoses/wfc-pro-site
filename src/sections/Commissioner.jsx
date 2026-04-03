@@ -2,15 +2,15 @@ import { motion } from 'framer-motion'
 
 export default function Commissioner() {
   return (
-    <section className="section relative overflow-hidden">
-      {/* Full-width hero image background */}
-      <div className="absolute inset-0 pointer-events-none">
+    <section className="section relative overflow-hidden" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      {/* Full-width hero background */}
+      <div className="absolute inset-0">
         <img
           src="/ricardinho-commissioner.jpg"
           alt=""
-          className="w-full h-full object-cover object-top opacity-30"
+          className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-section-alt)] via-[rgba(13,13,20,0.7)] to-[var(--bg-section-alt)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-dark)] via-[rgba(10,10,15,0.5)] to-[rgba(10,10,15,0.3)]" />
       </div>
 
       <div className="section-narrow relative z-10">
@@ -19,33 +19,17 @@ export default function Commissioner() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-8"
+          className="mb-6"
         >
           <p className="section-eyebrow">The Commissioner</p>
           <h2
-            className="text-6xl sm:text-7xl md:text-8xl font-bold mb-4"
+            className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             <span className="gradient-text">RICARDINHO</span>
           </h2>
         </motion.div>
 
-        {/* Large centered portrait */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-10"
-        >
-          <img
-            src="/ricardinho-commissioner.jpg"
-            alt="Ricardinho — Commissioner, World Futsal Championships"
-            className="w-full max-w-lg mx-auto rounded-lg glow-border"
-          />
-        </motion.div>
-
-        {/* Bio */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
