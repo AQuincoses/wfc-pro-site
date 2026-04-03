@@ -109,7 +109,7 @@ export default function Apply() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {fields.slice(0, 2).map((field) => (
               <div key={field.name}>
-                <label className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2 font-semibold">
+                <label className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2 font-semibold text-left">
                   {field.label} {field.required && <span className="text-[var(--accent-hot)]">*</span>}
                 </label>
                 <input
@@ -128,7 +128,7 @@ export default function Apply() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {fields.slice(2, 4).map((field) => (
               <div key={field.name}>
-                <label className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2 font-semibold">
+                <label className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2 font-semibold text-left">
                   {field.label} {field.required && <span className="text-[var(--accent-hot)]">*</span>}
                 </label>
                 <input

@@ -8,17 +8,33 @@ import Apply from './sections/Apply'
 import Footer from './sections/Footer'
 import Nav from './sections/Nav'
 
+function Divider() {
+  return <div className="section-divider" />
+}
+
 export default function App() {
   return (
     <div className="min-h-screen bg-[var(--bg-dark)] grid-bg relative">
       <Nav />
       <Hero />
+      <Divider />
       <Prize />
-      <Tournament />
+      <Divider />
+      <div className="section-alt">
+        <Tournament />
+      </div>
+      <Divider />
       <WhyCompete />
-      <Commissioner />
+      <Divider />
+      <div className="section-alt">
+        <Commissioner />
+      </div>
+      <Divider />
       <Highlights />
-      <Apply />
+      <Divider />
+      <div className="section-alt">
+        <Apply />
+      </div>
       <Footer />
     </div>
   )

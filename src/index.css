@@ -2,6 +2,7 @@
 
 :root {
   --bg-dark: #0a0a0f;
+  --bg-section-alt: #0d0d14;
   --bg-card: #12121a;
   --bg-card-hover: #1a1a25;
   --text-primary: #ffffff;
@@ -42,10 +43,6 @@ body {
   text-shadow: 0 0 40px var(--accent-glow), 0 0 80px var(--accent-glow);
 }
 
-.glow-text-hot {
-  text-shadow: 0 0 40px var(--accent-hot-glow), 0 0 80px var(--accent-hot-glow);
-}
-
 .glow-border {
   box-shadow: 0 0 20px var(--accent-glow), inset 0 0 20px rgba(0, 212, 255, 0.05);
 }
@@ -83,14 +80,31 @@ body {
 
 /* ── Section layout system ── */
 .section {
-  padding: 8rem 1.5rem;
+  padding: 6rem 1rem;
   text-align: center;
+  position: relative;
 }
 
 @media (min-width: 640px) {
-  .section {
-    padding: 10rem 2rem;
-  }
+  .section { padding: 8rem 1.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .section { padding: 10rem 2rem; }
+}
+
+/* Alternating section backgrounds for visual separation */
+.section-alt {
+  background-color: var(--bg-section-alt);
+}
+
+/* Gradient divider between sections */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--border) 20%, var(--accent) 50%, var(--border) 80%, transparent 100%);
+  opacity: 0.4;
+  max-width: 40rem;
+  margin: 0 auto;
 }
 
 .section-inner {
@@ -109,12 +123,6 @@ body {
   letter-spacing: 0.3em;
   font-weight: 600;
   color: var(--accent-hot);
-  margin-bottom: 1rem;
-}
-
-.section-heading {
-  font-family: var(--font-display);
-  font-weight: 700;
   margin-bottom: 1rem;
 }
 
