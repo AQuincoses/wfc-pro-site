@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --bg-dark: #0a0a0f;
+  --bg-card: #12121a;
+  --bg-card-hover: #1a1a25;
+  --text-primary: #ffffff;
+  --text-secondary: #8a8a9a;
+  --text-muted: #55556a;
+  --accent: #00d4ff;
+  --accent-glow: rgba(0, 212, 255, 0.3);
+  --accent-hot: #ff2d78;
+  --accent-hot-glow: rgba(255, 45, 120, 0.3);
+  --border: #1e1e2e;
+  --border-accent: rgba(0, 212, 255, 0.2);
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Glow effects */
+.glow-text {
+  text-shadow: 0 0 40px var(--accent-glow), 0 0 80px var(--accent-glow);
+}
+
+.glow-text-hot {
+  text-shadow: 0 0 40px var(--accent-hot-glow), 0 0 80px var(--accent-hot-glow);
+}
+
+.glow-border {
+  box-shadow: 0 0 20px var(--accent-glow), inset 0 0 20px rgba(0, 212, 255, 0.05);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hot) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated grid background */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Scanline overlay */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+}
+
+/* Form inputs */
+input, textarea, select {
+  font-family: var(--font-body);
+}
