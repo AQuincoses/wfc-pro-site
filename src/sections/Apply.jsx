@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
-const GOOGLE_SHEETS_URL = '' // Will be set when Apps Script webhook is created
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxrF1O0gzJ4vAsC4N_6Qmmhv1NgHPF8CiuuNBncYciIITbCIu9bwHAc3MGNZaFnDs6BMw/exec'
 
 const fields = [
   { name: 'teamName', label: 'Team Name', type: 'text', required: true },
