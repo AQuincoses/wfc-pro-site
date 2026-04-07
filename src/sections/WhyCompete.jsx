@@ -26,24 +26,30 @@ const reasons = [
 export default function WhyCompete() {
   return (
     <section className="section">
-      <div className="section-inner">
-        <motion.div
+      <div className="section-inner flex flex-col items-center text-center">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="section-eyebrow"
+          style={{ marginBottom: '25px' }}
+        >
+          The Opportunity
+        </motion.p>
+
+        <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="text-5xl sm:text-6xl md:text-7xl font-bold"
+          style={{ fontFamily: 'var(--font-display)', marginBottom: '48px' }}
         >
-          <p className="section-eyebrow">The Opportunity</p>
-          <h2
-            className="text-5xl sm:text-6xl md:text-7xl font-bold"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
-            WHY <span className="gradient-text">COMPETE</span>
-          </h2>
-        </motion.div>
+          WHY <span className="gradient-text">COMPETE</span>
+        </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-16 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 max-w-3xl w-full">
           {reasons.map((item, i) => (
             <motion.div
               key={item.number}
@@ -51,21 +57,22 @@ export default function WhyCompete() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-center group px-4"
+              className="text-center group"
+              style={{ padding: '0 16px' }}
             >
               <span
-                className="block text-5xl font-bold text-[var(--border)] group-hover:text-[var(--accent)] transition-colors duration-500 mb-3"
-                style={{ fontFamily: 'var(--font-display)' }}
+                className="block text-5xl font-bold text-[var(--border)] group-hover:text-[var(--accent)] transition-colors duration-500"
+                style={{ fontFamily: 'var(--font-display)', marginBottom: '12px' }}
               >
                 {item.number}
               </span>
               <h3
-                className="text-2xl sm:text-3xl font-bold mb-3 text-[var(--text-primary)]"
-                style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em' }}
+                className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]"
+                style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em', marginBottom: '12px' }}
               >
                 {item.title}
               </h3>
-              <p className="text-[var(--text-secondary)] leading-relaxed mx-auto">
+              <p className="text-[var(--text-secondary)] leading-relaxed">
                 {item.desc}
               </p>
             </motion.div>

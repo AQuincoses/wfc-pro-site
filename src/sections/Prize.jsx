@@ -32,7 +32,7 @@ export default function Prize() {
   return (
     <section id="prize" className="section relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(0,212,255,0.1)_0%,transparent_60%)]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(113,75,184,0.1)_0%,transparent_60%)]" />
       </div>
 
       <div className="section-narrow relative z-10">

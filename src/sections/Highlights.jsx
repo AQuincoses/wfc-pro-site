@@ -3,32 +3,46 @@ import { motion } from 'framer-motion'
 export default function Highlights() {
   return (
     <section id="highlights" className="section">
-      <div className="section-inner">
-        <motion.div
+      <div className="section-inner flex flex-col items-center text-center">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="section-eyebrow"
+          style={{ marginBottom: '25px' }}
+        >
+          Where It All Began
+        </motion.p>
+
+        <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="text-5xl sm:text-6xl md:text-7xl font-bold"
+          style={{ fontFamily: 'var(--font-display)', marginBottom: '25px' }}
         >
-          <p className="section-eyebrow">Where It All Began</p>
-          <h2
-            className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
-            13 YEARS OF <span className="gradient-text">FUTSAL</span>
-          </h2>
-          <p className="section-body">
-            It all started with World Futsal Championships I in 2014. Now, the 13th edition brings with it the largest cash prize in futsal tournament history.
-          </p>
-        </motion.div>
+          13 YEARS OF <span className="gradient-text">FUTSAL</span>
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-lg leading-relaxed text-[var(--text-secondary)] max-w-2xl"
+          style={{ marginBottom: '48px' }}
+        >
+          It all started with World Futsal Championships I in 2014. Now, the 13th edition brings with it the largest cash prize in futsal tournament history.
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden glow-border"
+          className="aspect-video w-full max-w-5xl rounded-lg overflow-hidden glow-border"
           style={{ backgroundColor: 'var(--bg-card)', border: '1px solid var(--border)' }}
         >
           <iframe

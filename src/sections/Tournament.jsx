@@ -26,25 +26,34 @@ const details = [
 export default function Tournament() {
   return (
     <section id="tournament" className="section">
-      <div className="section-inner">
-        <motion.div
+      <div className="section-inner flex flex-col items-center text-center">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="section-eyebrow"
+          style={{ marginBottom: '25px' }}
+        >
+          The Tournament
+        </motion.p>
+
+        <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="text-5xl sm:text-6xl md:text-7xl font-bold"
+          style={{ fontFamily: 'var(--font-display)', marginBottom: '48px' }}
         >
-          <p className="section-eyebrow">The Tournament</p>
-          <h2
-            className="text-5xl sm:text-6xl md:text-7xl font-bold"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
-            THREE DAYS.{' '}
-            <span className="gradient-text">ONE CHAMPION.</span>
-          </h2>
-        </motion.div>
+          THREE DAYS.{' '}
+          <span className="gradient-text">ONE CHAMPION.</span>
+        </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl w-full"
+          style={{ marginBottom: '48px' }}
+        >
           {details.map((item, i) => (
             <motion.div
               key={item.title}
@@ -52,12 +61,13 @@ export default function Tournament() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-8 text-center hover:border-[var(--border-accent)] hover:bg-[var(--bg-card-hover)] transition-all duration-300 group"
+              className="bg-[var(--bg-card)] border border-[var(--border)] rounded-lg text-center hover:border-[var(--border-accent)] hover:bg-[var(--bg-card-hover)] transition-all duration-300 group"
+              style={{ padding: '40px 32px' }}
             >
-              <div className="text-4xl mb-4">{item.icon}</div>
+              <div style={{ fontSize: '2.5rem', marginBottom: '20px' }}>{item.icon}</div>
               <h3
-                className="text-lg font-bold mb-2 text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors"
-                style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em' }}
+                className="text-lg font-bold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors"
+                style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em', marginBottom: '12px' }}
               >
                 {item.title}
               </h3>
@@ -73,7 +83,6 @@ export default function Tournament() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
           viewport={{ once: true }}
-          className="mt-16"
         >
           <div className="inline-flex items-center gap-4 sm:gap-6 text-sm sm:text-base font-semibold uppercase tracking-wider text-[var(--text-muted)]">
             <span className="text-[var(--text-primary)]">Group Stage</span>

@@ -46,7 +46,7 @@ export default function Apply() {
   }
 
   const inputClasses =
-    'w-full bg-[var(--bg-card)] border border-[var(--border)] rounded px-4 py-3 text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--accent)] focus:shadow-[0_0_10px_var(--accent-glow)] transition-all placeholder:text-[var(--text-muted)]'
+    'w-full bg-[var(--bg-dark)] border border-[var(--border)] rounded-md text-[var(--text-primary)] text-base focus:outline-none focus:border-[var(--accent)] focus:shadow-[0_0_10px_var(--accent-glow)] transition-all placeholder:text-[var(--text-muted)]'
 
   if (status === 'sent') {
     return (
@@ -73,28 +73,40 @@ export default function Apply() {
 
   return (
     <section id="apply" className="section">
-      <div className="section-narrow">
+      <div className="flex flex-col items-center text-center" style={{ maxWidth: '44rem', margin: '0 auto' }}>
         {/* Header */}
-        <motion.div
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="section-eyebrow"
+          style={{ marginBottom: '25px' }}
+        >
+          Enter the Arena
+        </motion.p>
+
+        <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-5xl sm:text-6xl md:text-7xl font-bold"
+          style={{ fontFamily: 'var(--font-display)', marginBottom: '25px' }}
         >
-          <p className="text-sm uppercase tracking-[0.3em] font-semibold text-[var(--accent-hot)] mb-4">
-            Enter the Arena
-          </p>
-          <h2
-            className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4"
-            style={{ fontFamily: 'var(--font-display)' }}
-          >
-            APPLY TO <span className="gradient-text">COMPETE</span>
-          </h2>
-          <p className="text-lg text-[var(--text-secondary)] max-w-xl mx-auto">
-            Think your team has what it takes? Submit your application for the World Futsal Championships Pro Tournament.
-          </p>
-        </motion.div>
+          APPLY TO <span className="gradient-text">COMPETE</span>
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-lg text-[var(--text-secondary)] max-w-xl"
+          style={{ marginBottom: '48px' }}
+        >
+          Think your team has what it takes? Submit your application for the World Futsal Championships Pro Tournament.
+        </motion.p>
 
         {/* Form */}
         <motion.form
@@ -103,13 +115,14 @@ export default function Apply() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           onSubmit={handleSubmit}
-          className="bg-[var(--bg-card)] border border-[var(--border)] rounded-lg p-8 sm:p-10 space-y-6"
+          className="w-full bg-[var(--bg-card)] border border-[var(--border)] rounded-lg space-y-10"
+          style={{ padding: '48px 44px' }}
         >
           {/* Two-column for name fields */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             {fields.slice(0, 2).map((field) => (
               <div key={field.name}>
-                <label className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2 font-semibold text-left">
+                <label className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-4 font-semibold text-left">
                   {field.label} {field.required && <span className="text-[var(--accent-hot)]">*</span>}
                 </label>
                 <input
@@ -119,16 +132,17 @@ export default function Apply() {
                   value={form[field.name] || ''}
                   onChange={handleChange}
                   className={inputClasses}
+                  style={{ padding: '14px 18px' }}
                 />
               </div>
             ))}
           </div>
 
           {/* Two-column for email/phone */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             {fields.slice(2, 4).map((field) => (
               <div key={field.name}>
-                <label className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2 font-semibold text-left">
+                <label className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-4 font-semibold text-left">
                   {field.label} {field.required && <span className="text-[var(--accent-hot)]">*</span>}
                 </label>
                 <input
@@ -138,6 +152,7 @@ export default function Apply() {
                   value={form[field.name] || ''}
                   onChange={handleChange}
                   className={inputClasses}
+                  style={{ padding: '14px 18px' }}
                 />
               </div>
             ))}
@@ -146,7 +161,7 @@ export default function Apply() {
           {/* Remaining fields */}
           {fields.slice(4).map((field) => (
             <div key={field.name}>
-              <label className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-2 font-semibold">
+              <label className="block text-xs uppercase tracking-widest text-[var(--text-muted)] mb-4 font-semibold text-left">
                 {field.label} {field.required && <span className="text-[var(--accent-hot)]">*</span>}
               </label>
               {field.type === 'textarea' ? (
@@ -156,8 +171,9 @@ export default function Apply() {
                   placeholder={field.placeholder}
                   value={form[field.name] || ''}
                   onChange={handleChange}
-                  rows={3}
+                  rows={4}
                   className={inputClasses + ' resize-y'}
+                  style={{ padding: '14px 18px' }}
                 />
               ) : (
                 <input
@@ -168,18 +184,19 @@ export default function Apply() {
                   value={form[field.name] || ''}
                   onChange={handleChange}
                   className={inputClasses}
+                  style={{ padding: '14px 18px' }}
                 />
               )}
             </div>
           ))}
 
           {/* Submit */}
-          <div className="pt-4">
+          <div style={{ paddingTop: '12px' }}>
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="w-full py-4 text-lg font-bold uppercase tracking-wider bg-[var(--accent)] text-[var(--bg-dark)] rounded cursor-pointer border-none hover:shadow-[0_0_30px_var(--accent-glow)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-              style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.15em' }}
+              className="w-full text-xl font-bold uppercase rounded-md cursor-pointer border-none text-white hover:shadow-[0_0_30px_var(--accent-glow)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em', background: 'linear-gradient(90deg, #dc3175 0%, #714bb8 100%)', padding: '20px 48px' }}
             >
               {status === 'sending' ? 'Submitting...' : 'Submit Application'}
             </button>
