@@ -2,22 +2,22 @@ import { motion } from 'framer-motion'
 
 const details = [
   {
-    icon: '📅',
+    icon: '/calendar1.png',
     title: 'July 17-19, 2026',
     desc: 'Three days of elite professional futsal',
   },
   {
-    icon: '📍',
+    icon: '/position1.png',
     title: 'Orange County Convention Center',
     desc: 'Orlando, Florida — World-class venue',
   },
   {
-    icon: '⚽',
+    icon: '/ball1.png',
     title: '12-16 Elite Teams',
     desc: 'Top clubs from around the world',
   },
   {
-    icon: '🏆',
+    icon: '/trophy1.png',
     title: '3 Matches Guaranteed',
     desc: 'Group stage, semifinals, and finals',
   },
@@ -64,7 +64,9 @@ export default function Tournament() {
               className="bg-[var(--bg-card)] border border-[var(--border)] rounded-lg text-center hover:border-[var(--border-accent)] hover:bg-[var(--bg-card-hover)] transition-all duration-300 group"
               style={{ padding: '40px 32px' }}
             >
-              <div style={{ fontSize: '2.5rem', marginBottom: '20px' }}>{item.icon}</div>
+              <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
+                <img src={item.icon} alt="" style={{ width: '3.75rem', height: '3.75rem', objectFit: 'contain' }} />
+              </div>
               <h3
                 className="text-lg font-bold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors"
                 style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em', marginBottom: '12px' }}

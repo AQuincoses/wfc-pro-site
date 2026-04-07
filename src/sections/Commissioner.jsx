@@ -2,24 +2,24 @@ import { motion } from 'framer-motion'
 
 export default function Commissioner() {
   return (
-    <section className="relative overflow-hidden w-full" style={{ padding: 0 }}>
+    <section
+      className="relative overflow-hidden w-full"
+      style={{
+        padding: 0,
+        minHeight: '100vh',
+        backgroundImage: "url('/ricardinho-hero.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="flex flex-col lg:flex-row w-full" style={{ minHeight: '100vh' }}>
-        {/* Image — left side */}
-        <div className="relative w-full lg:w-[55%] flex-shrink-0" style={{ minHeight: '50vh' }}>
-          <img
-            src="/ricardinho-commissioner.jpg"
-            alt="Ricardinho"
-            className="absolute inset-0 w-full h-full object-cover object-top"
-          />
-          {/* Right edge fade into dark bg on desktop */}
-          <div className="hidden lg:block absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-[var(--bg-dark)] to-transparent" />
-          {/* Bottom fade on mobile */}
-          <div className="lg:hidden absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[var(--bg-dark)] to-transparent" />
-        </div>
+        {/* Image space — left side */}
+        <div className="w-full lg:w-[55%] flex-shrink-0" style={{ minHeight: '50vh' }} />
 
         {/* Text — right side */}
         <div
-          className="relative w-full lg:w-[45%] flex flex-col justify-center bg-[var(--bg-dark)]"
+          className="relative w-full lg:w-[45%] flex flex-col justify-center"
           style={{ padding: '64px 48px 64px 40px' }}
         >
           <motion.p
@@ -57,12 +57,14 @@ export default function Commissioner() {
             >
               Commissioner, World Futsal Championships
             </p>
-            <p className="text-lg sm:text-xl leading-relaxed text-[var(--text-secondary)]" style={{ marginBottom: '20px' }}>
-              Widely regarded as the greatest futsal player of all time. Six-time Best Player in the World. The face of professional futsal globally.
-            </p>
-            <p className="text-lg sm:text-xl leading-relaxed text-[var(--text-secondary)]">
-              Now leading the World Futsal Championships into its professional era — bringing the highest level of competition to Orlando.
-            </p>
+            <div style={{ maxWidth: '500px' }}>
+              <p className="text-lg sm:text-xl leading-relaxed text-[var(--text-secondary)]" style={{ marginBottom: '20px' }}>
+                Widely regarded as the greatest futsal player of all time. Six-time Best Player in the World. The face of professional futsal globally.
+              </p>
+              <p className="text-lg sm:text-xl leading-relaxed text-[var(--text-secondary)]">
+                Now leading the World Futsal Championships into its professional era — bringing the highest level of competition to Orlando.
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>

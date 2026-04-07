@@ -43,12 +43,15 @@ export default function Hero() {
   const countdown = useCountdown('2026-07-17T00:00:00')
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden scanlines">
-      {/* Background gradient effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-[radial-gradient(circle,rgba(113,75,184,0.08)_0%,transparent_70%)]" />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[radial-gradient(circle,rgba(113,75,184,0.06)_0%,transparent_70%)]" />
-      </div>
+    <section
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden scanlines"
+      style={{
+        backgroundImage: "url('/hero-bg.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}

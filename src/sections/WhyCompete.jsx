@@ -57,8 +57,8 @@ export default function WhyCompete() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-center group"
-              style={{ padding: '0 16px' }}
+              className="text-center group rounded-md transition-all duration-300 hover:bg-[rgba(255,255,255,0.03)]"
+              style={{ padding: '32px 24px', background: 'rgba(255,255,255,0.015)', border: '1px solid rgba(255,255,255,0.04)' }}
             >
               <span
                 className="block text-5xl font-bold text-[var(--border)] group-hover:text-[var(--accent)] transition-colors duration-500"
