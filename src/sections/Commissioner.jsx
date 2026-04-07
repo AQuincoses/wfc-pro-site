@@ -63,7 +63,7 @@ export default function Commissioner() {
             src="/ricardinho-hero.jpg"
             alt="Ricardinho"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: '42% center' }}
+            style={{ objectPosition: '45% center' }}
           />
           {/* Bottom fade into dark */}
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[var(--bg-dark)] to-transparent" />
