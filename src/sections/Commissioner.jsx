@@ -60,10 +60,10 @@ export default function Commissioner() {
         {/* Image */}
         <div className="relative w-full" style={{ height: '50vh' }}>
           <img
-            src="/ricardinho-hero.jpg"
+            src="/ricardinho-hero-mobile.jpg"
             alt="Ricardinho"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: '72% center' }}
+            style={{ objectPosition: 'center center' }}
           />
           {/* Bottom fade into dark */}
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[var(--bg-dark)] to-transparent" />
