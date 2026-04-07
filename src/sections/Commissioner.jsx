@@ -63,14 +63,14 @@ export default function Commissioner() {
             src="/ricardinho-hero.jpg"
             alt="Ricardinho"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: '45% center' }}
+            style={{ objectPosition: '60% center' }}
           />
           {/* Bottom fade into dark */}
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[var(--bg-dark)] to-transparent" />
         </div>
 
         {/* Text */}
-        <div className="bg-[var(--bg-dark)]" style={{ padding: '40px 28px 56px' }}>
+        <div className="bg-[var(--bg-dark)]" style={{ padding: '40px 16px 56px 48px' }}>
           <CommissionerText />
         </div>
       </div>
