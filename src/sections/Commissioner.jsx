@@ -2,30 +2,27 @@ import { motion } from 'framer-motion'
 
 export default function Commissioner() {
   return (
-    <section
-      className="relative overflow-hidden w-full"
-      style={{
-        padding: 0,
-        minHeight: '100vh',
-        backgroundImage: "url('/ricardinho-hero.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: '35% top',
-        backgroundRepeat: 'no-repeat',
-      }}
-    >
-      <div className="flex flex-col lg:flex-row w-full" style={{ minHeight: '100vh' }}>
-        {/* Image space — left side (taller on mobile to show more of the photo) */}
-        <div className="w-full lg:w-[55%] flex-shrink-0 min-h-[60vh] lg:min-h-0" />
+    <section className="relative overflow-hidden w-full" style={{ padding: 0 }}>
+      {/* Mobile: stacked layout — text on top, image below */}
+      {/* Desktop: side-by-side with background image */}
 
-        {/* Text — right side */}
+      {/* Desktop background image */}
+      <div
+        className="hidden lg:block absolute inset-0"
+        style={{
+          backgroundImage: "url('/ricardinho-hero.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: '35% center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+
+      <div className="flex flex-col lg:flex-row w-full lg:min-h-screen">
+        {/* Mobile: text first */}
         <div
-          className="relative w-full lg:w-[45%] flex flex-col justify-center px-8 py-10 sm:px-10 lg:px-10 lg:py-16 xl:px-12 xl:py-16"
+          className="relative w-full lg:order-2 lg:w-[45%] flex flex-col justify-center bg-[var(--bg-dark)] lg:bg-transparent px-10 pt-20 pb-10 sm:px-12 lg:px-10 lg:pt-0 lg:pb-0 lg:py-16 xl:px-12 xl:py-16"
         >
-          {/* Mobile dark overlay for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[rgba(10,10,15,0.95)] via-[rgba(10,10,15,0.85)] to-[rgba(10,10,15,0.6)] lg:hidden" />
-          <div className="absolute inset-0 bg-[var(--bg-dark)] hidden lg:block" style={{ opacity: 0 }} />
-
-          <div className="relative z-10 lg:pr-12" style={{ padding: '0' }}>
+          <div className="relative z-10 lg:pr-12">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -71,6 +68,21 @@ export default function Commissioner() {
               </div>
             </motion.div>
           </div>
+        </div>
+
+        {/* Desktop: image spacer (left side) */}
+        <div className="hidden lg:block lg:order-1 lg:w-[55%] flex-shrink-0" />
+
+        {/* Mobile: Ricardinho image below text */}
+        <div className="relative w-full lg:hidden" style={{ height: '55vh' }}>
+          <img
+            src="/ricardinho-hero.jpg"
+            alt="Ricardinho"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ objectPosition: '35% 20%' }}
+          />
+          {/* Top fade into dark bg */}
+          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[var(--bg-dark)] to-transparent" />
         </div>
       </div>
     </section>
