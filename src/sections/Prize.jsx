@@ -79,7 +79,7 @@ export default function Prize() {
           viewport={{ once: true }}
           className="section-body"
         >
-          Three days. One champion. The largest cash prize in futsal tournament history.
+          Three days. One champion. Largest cash prize in tournament history.
         </motion.p>
       </div>
     </section>

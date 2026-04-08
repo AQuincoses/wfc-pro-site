@@ -58,6 +58,13 @@ body {
   box-decoration-break: clone;
 }
 
+/* Safari line-height and font rendering fixes */
+.tabular-nums {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-numeric: tabular-nums;
+}
+
 /* Animated grid background */
 .grid-bg {
   background-image:

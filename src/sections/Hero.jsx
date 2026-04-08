@@ -27,8 +27,8 @@ function CountdownUnit({ value, label }) {
   return (
     <div className="flex flex-col items-center">
       <span
-        className="text-4xl sm:text-5xl md:text-6xl font-bold tabular-nums"
-        style={{ fontFamily: 'var(--font-display)', color: 'var(--accent)' }}
+        className="font-bold tabular-nums"
+        style={{ fontFamily: 'var(--font-display)', color: 'var(--accent)', fontSize: 'clamp(2rem, 3.5vw, 3.75rem)' }}
       >
         {String(value).padStart(2, '0')}
       </span>
@@ -67,7 +67,8 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          style={{ width: '273px', height: 'auto', marginBottom: '20px' }}
+          className="w-[180px] sm:w-[220px] lg:w-[273px]"
+          style={{ height: 'auto', marginBottom: 'clamp(10px, 1.5vh, 20px)' }}
         />
 
         {/* Eyebrow */}
@@ -76,7 +77,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
           className="text-sm sm:text-base uppercase tracking-[0.3em] font-semibold text-[var(--accent-hot)]"
-          style={{ marginBottom: '25px' }}
+          style={{ marginBottom: 'clamp(12px, 2vh, 25px)' }}
         >
           <span>July 17-19, 2026</span>{' '}<span style={{ color: '#f5c542' }}>&middot;</span>{' '}<span style={{ color: '#714bb8' }}>Orlando, FL</span>
         </motion.p>
@@ -86,8 +87,8 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold leading-[0.85] tracking-tight"
-          style={{ fontFamily: 'var(--font-display)', marginBottom: '10px' }}
+          className="text-6xl sm:text-8xl md:text-9xl font-bold leading-[0.85] tracking-tight"
+          style={{ fontFamily: 'var(--font-display)', marginBottom: '10px', fontSize: 'clamp(3.75rem, 8vw, 10rem)' }}
         >
           <span className="block">WORLD FUTSAL</span>
           <span className="block gradient-text">CHAMPIONSHIPS</span>
@@ -103,14 +104,14 @@ export default function Hero() {
             borderRadius: '5px',
             padding: '1px',
             boxShadow: '0 0 12px rgba(220,49,117,0.2), 0 0 24px rgba(113,75,184,0.15)',
-            marginBottom: '30px',
+            marginBottom: 'clamp(16px, 2.5vh, 30px)',
           }}
         >
           <span
             className="font-bold uppercase text-white block text-center"
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: '1.8rem',
+              fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)',
               letterSpacing: '0.08em',
               padding: '10px 48px',
               borderRadius: '4px',
@@ -130,15 +131,15 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.6 }}
-          className="flex items-start justify-center gap-4 sm:gap-6"
-          style={{ marginBottom: '25px' }}
+          className="flex items-start justify-center gap-3 sm:gap-5"
+          style={{ marginBottom: 'clamp(12px, 2vh, 25px)' }}
         >
           <CountdownUnit value={countdown.days} label="Days" />
-          <span className="text-4xl sm:text-5xl md:text-6xl text-[var(--text-muted)] font-light" style={{ fontFamily: 'var(--font-display)', lineHeight: '1' }}>:</span>
+          <span className="text-[var(--text-muted)] font-light" style={{ fontFamily: 'var(--font-display)', lineHeight: '1', fontSize: 'clamp(2rem, 3.5vw, 3.75rem)' }}>:</span>
           <CountdownUnit value={countdown.hours} label="Hours" />
-          <span className="text-4xl sm:text-5xl md:text-6xl text-[var(--text-muted)] font-light" style={{ fontFamily: 'var(--font-display)', lineHeight: '1' }}>:</span>
+          <span className="text-[var(--text-muted)] font-light" style={{ fontFamily: 'var(--font-display)', lineHeight: '1', fontSize: 'clamp(2rem, 3.5vw, 3.75rem)' }}>:</span>
           <CountdownUnit value={countdown.minutes} label="Min" />
-          <span className="text-4xl sm:text-5xl md:text-6xl text-[var(--text-muted)] font-light" style={{ fontFamily: 'var(--font-display)', lineHeight: '1' }}>:</span>
+          <span className="text-[var(--text-muted)] font-light" style={{ fontFamily: 'var(--font-display)', lineHeight: '1', fontSize: 'clamp(2rem, 3.5vw, 3.75rem)' }}>:</span>
           <CountdownUnit value={countdown.seconds} label="Sec" />
         </motion.div>
 
@@ -151,7 +152,7 @@ export default function Hero() {
           <a
             href="#apply"
             className="inline-block text-xl font-bold uppercase rounded hover:shadow-[0_0_30px_var(--accent-glow)] transition-all duration-300 no-underline text-white"
-            style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em', background: 'linear-gradient(90deg, #dc3175 0%, #714bb8 100%)', padding: '20px 48px' }}
+            style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em', background: 'linear-gradient(90deg, #dc3175 0%, #714bb8 100%)', padding: 'clamp(14px, 1.8vh, 20px) 48px' }}
           >
             Apply to Compete
           </a>
