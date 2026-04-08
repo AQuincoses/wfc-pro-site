@@ -58,7 +58,18 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="relative z-10 max-w-5xl w-full flex flex-col items-center text-center"
+        style={{ marginTop: '-6vh' }}
       >
+        {/* Logo */}
+        <motion.img
+          src="/champslogo.png"
+          alt="World Futsal Championships"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          style={{ width: '273px', height: 'auto', marginBottom: '20px' }}
+        />
+
         {/* Eyebrow */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -82,31 +93,52 @@ export default function Hero() {
           <span className="block gradient-text">CHAMPIONSHIPS</span>
         </motion.h1>
 
-        {/* Subline */}
-        <motion.p
+        {/* PRO badge — gradient border wrapper */}
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-          className="text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl leading-relaxed"
-          style={{ marginBottom: '25px' }}
+          transition={{ delay: 0.6, duration: 0.5 }}
+          style={{
+            background: 'linear-gradient(90deg, #dc3175, #714bb8)',
+            borderRadius: '5px',
+            padding: '1px',
+            boxShadow: '0 0 12px rgba(220,49,117,0.2), 0 0 24px rgba(113,75,184,0.15)',
+            marginBottom: '30px',
+          }}
         >
-          The first professional futsal prize tournament in U.S. history.
-        </motion.p>
+          <span
+            className="font-bold uppercase text-white block text-center"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '1.8rem',
+              letterSpacing: '0.08em',
+              padding: '10px 48px',
+              borderRadius: '4px',
+              background: 'rgba(10,10,15,0.75)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
+              textShadow: '0 0 8px rgba(255,255,255,0.3), 0 0 20px rgba(255,255,255,0.12)',
+              lineHeight: '1',
+            }}
+          >
+            PRO
+          </span>
+        </motion.div>
 
         {/* Countdown */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.6 }}
-          className="flex items-center justify-center gap-4 sm:gap-6"
+          className="flex items-start justify-center gap-4 sm:gap-6"
           style={{ marginBottom: '25px' }}
         >
           <CountdownUnit value={countdown.days} label="Days" />
-          <span className="text-2xl text-[var(--text-muted)] font-light">:</span>
+          <span className="text-4xl sm:text-5xl md:text-6xl text-[var(--text-muted)] font-light" style={{ fontFamily: 'var(--font-display)', lineHeight: '1' }}>:</span>
           <CountdownUnit value={countdown.hours} label="Hours" />
-          <span className="text-2xl text-[var(--text-muted)] font-light">:</span>
+          <span className="text-4xl sm:text-5xl md:text-6xl text-[var(--text-muted)] font-light" style={{ fontFamily: 'var(--font-display)', lineHeight: '1' }}>:</span>
           <CountdownUnit value={countdown.minutes} label="Min" />
-          <span className="text-2xl text-[var(--text-muted)] font-light">:</span>
+          <span className="text-4xl sm:text-5xl md:text-6xl text-[var(--text-muted)] font-light" style={{ fontFamily: 'var(--font-display)', lineHeight: '1' }}>:</span>
           <CountdownUnit value={countdown.seconds} label="Sec" />
         </motion.div>
 

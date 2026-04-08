@@ -4,7 +4,7 @@ const details = [
   {
     icon: '/calendar1.png',
     title: 'July 17-19, 2026',
-    desc: 'Three days of elite professional futsal',
+    desc: 'Three days of elite futsal',
   },
   {
     icon: '/position1.png',
@@ -13,8 +13,8 @@ const details = [
   },
   {
     icon: '/ball1.png',
-    title: '12-16 Elite Teams',
-    desc: 'Top clubs from around the world',
+    title: '16 Teams Maximum',
+    desc: 'Top global clubs. Anyone can win.',
   },
   {
     icon: '/trophy1.png',
@@ -68,12 +68,12 @@ export default function Tournament() {
                 <img src={item.icon} alt="" style={{ width: '3.75rem', height: '3.75rem', objectFit: 'contain' }} />
               </div>
               <h3
-                className="text-lg font-bold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors"
-                style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em', marginBottom: '12px' }}
+                className="text-xl sm:text-2xl font-bold text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors"
+                style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em', marginBottom: '12px', lineHeight: '1.15' }}
               >
                 {item.title}
               </h3>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+              <p className="text-sm text-[var(--text-secondary)]" style={{ lineHeight: '1.45' }}>
                 {item.desc}
               </p>
             </motion.div>

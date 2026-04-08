@@ -4,12 +4,12 @@ const reasons = [
   {
     number: '01',
     title: 'Make History',
-    desc: 'Compete in the first-ever professional futsal prize tournament in U.S. history. Your team writes the first chapter.',
+    desc: 'Compete in the first-ever professional division in tournament history. Will your team write the first chapter?',
   },
   {
     number: '02',
-    title: 'Global Stage',
-    desc: 'Media coverage, live broadcast, and a global audience. Put your club in front of the futsal world.',
+    title: 'Live Media Coverage',
+    desc: 'A global audience. Put your club in front of the futsal world.',
   },
   {
     number: '03',
@@ -57,8 +57,8 @@ export default function WhyCompete() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-center group rounded-md transition-all duration-300 hover:bg-[rgba(255,255,255,0.03)]"
-              style={{ padding: '32px 24px', background: 'rgba(255,255,255,0.015)', border: '1px solid rgba(255,255,255,0.04)' }}
+              className="bg-[var(--bg-card)] border border-[var(--border)] rounded-lg text-center hover:border-[var(--border-accent)] hover:bg-[var(--bg-card-hover)] transition-all duration-300"
+              style={{ padding: '40px 32px' }}
             >
               <span
                 className="block text-5xl font-bold text-[var(--border)] group-hover:text-[var(--accent)] transition-colors duration-500"
@@ -67,7 +67,7 @@ export default function WhyCompete() {
                 {item.number}
               </span>
               <h3
-                className="text-2xl sm:text-3xl font-bold text-[var(--text-primary)]"
+                className="text-xl sm:text-2xl font-bold text-[var(--text-primary)]"
                 style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em', marginBottom: '12px' }}
               >
                 {item.title}

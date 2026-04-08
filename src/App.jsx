@@ -20,15 +20,13 @@ export default function App() {
       <Divider />
       <Prize />
       <Divider />
+      <Commissioner />
+      <Divider />
       <div className="section-alt">
         <Tournament />
       </div>
       <Divider />
       <WhyCompete />
-      <Divider />
-      <div className="section-alt">
-        <Commissioner />
-      </div>
       <Divider />
       <Highlights />
       <Divider />
