@@ -150,11 +150,13 @@ export default function Hero() {
           transition={{ delay: 1.2, duration: 0.6 }}
         >
           <a
-            href="#apply"
+            href="https://unitedfutsal.typeform.com/to/xAzE6h6f"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block text-xl font-bold uppercase rounded hover:shadow-[0_0_30px_var(--accent-glow)] transition-all duration-300 no-underline text-white"
             style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.05em', background: 'linear-gradient(90deg, #dc3175 0%, #714bb8 100%)', padding: 'clamp(14px, 1.8vh, 20px) 48px' }}
           >
-            Apply to Compete
+            Submit Application
           </a>
         </motion.div>
       </motion.div>
