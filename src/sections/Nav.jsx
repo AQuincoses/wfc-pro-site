@@ -45,13 +45,15 @@ export default function Nav() {
               {link.label}
             </button>
           ))}
-          <button
-            onClick={() => handleClick('#apply')}
-            className="text-base font-bold uppercase text-white cursor-pointer border-none rounded-md hover:shadow-[0_0_20px_var(--accent-glow)] transition-all duration-200"
+          <a
+            href="https://unitedfutsal.typeform.com/to/xAzE6h6f"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-base font-bold uppercase text-white cursor-pointer border-none rounded-md hover:shadow-[0_0_20px_var(--accent-glow)] transition-all duration-200 no-underline"
             style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.15em', background: 'linear-gradient(90deg, #dc3175 0%, #714bb8 100%)', padding: '10px 28px' }}
           >
-            Apply Now
-          </button>
+            Submit Application
+          </a>
         </div>
 
         {/* Subtle divider */}
@@ -89,13 +91,16 @@ export default function Nav() {
                 {link.label}
               </button>
             ))}
-            <button
-              onClick={() => handleClick('#apply')}
-              className="mt-4 px-8 py-3 text-lg font-bold uppercase tracking-wider bg-[var(--accent)] text-[var(--bg-dark)] rounded cursor-pointer border-none"
+            <a
+              href="https://unitedfutsal.typeform.com/to/xAzE6h6f"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="mt-4 px-8 py-3 text-lg font-bold uppercase tracking-wider bg-[var(--accent)] text-[var(--bg-dark)] rounded cursor-pointer border-none no-underline"
               style={{ fontFamily: 'var(--font-display)' }}
             >
-              Apply Now
-            </button>
+              Submit Application
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
